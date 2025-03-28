@@ -11,7 +11,6 @@ import (
 
 func main() {
 	appName := "empty"
-	envName := "dev"
 	teamName := "devops"
 	namespaceName := appName
 
@@ -19,7 +18,6 @@ func main() {
 		Name: pulumi.String(appName),
 		Labels: pulumi.StringMap{
 			"app":  pulumi.String(appName),
-			"env":  pulumi.String(envName),
 			"team": pulumi.String(teamName),
 		},
 	}
@@ -48,9 +46,9 @@ func pulumiRun(namespaceName, appName string, metaData *metadatav1.ObjectMetaArg
 
 		ctx.Export("Namespace Name: ", NS.Metadata.Name())
 		ctx.Export("deployment export: ", DP.Metadata.Name())
-
 		return nil
 	})
+	return nil
 }
 
 func createNS(ctx *pulumi.Context, namespaceName string, metaData *metadatav1.ObjectMetaArgs) (*corev1.Namespace, error) {

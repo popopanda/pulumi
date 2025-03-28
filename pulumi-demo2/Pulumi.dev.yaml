@@ -3,6 +3,6 @@ config:
     pulumi:template: kubernetes-go
     pulumi:team: devops
     pulumi:environment: dev
-
+  pulumi-demo2:environment: dev
 environment:
   - pulumi-demo2/dev
