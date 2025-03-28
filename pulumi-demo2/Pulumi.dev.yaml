@@ -1,0 +1,8 @@
+config:
+  pulumi:tags:
+    pulumi:template: kubernetes-go
+    pulumi:team: devops
+    pulumi:environment: dev
+
+environment:
+  - pulumi-demo2/dev

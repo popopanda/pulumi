@@ -1,0 +1,8 @@
+name: pulumi-demo2
+description: A Go program to deploy a web application onto a Kubernetes cluster
+runtime: go
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: kubernetes-go
+      pulumi:team: devops
